@@ -117,7 +117,7 @@ h1 {
 
     .task-list li {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .task-list li button {
