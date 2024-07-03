@@ -1,0 +1,149 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Task Input Styles */
+.task-input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.task-input-container input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-input-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.task-input-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Task List Styles */
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.task-list li.completed span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-list li span {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.task-list li input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-family: "Montserrat";
+}
+
+.task-list li button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.task-list li button.edit {
+    background-color: #28a745;
+}
+
+.task-list li button.edit:hover {
+    background-color: #218838;
+}
+
+.task-list li button:hover {
+    background-color: #c82333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .task-input-container input {
+        width: 60%;
+    }
+
+    .task-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-list li button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-input-container input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .task-list li {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .task-list li button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
